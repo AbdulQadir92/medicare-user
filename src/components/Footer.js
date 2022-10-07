@@ -1,9 +1,10 @@
+import '../css/components/footer.css';
 
 
 const Footer = () => {
   return (
-    <footer>
-      Footer
+    <footer className="footer">
+      {/* Copy Rights 2022 */}
     </footer>
   )
 }

@@ -1,6 +1,8 @@
 :root {
   --main-color: #EB1D36;
-  --gradient: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+  --main-bg: #f7f9fa;
+  --light-bg: #fff;
+  --gradient: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
 
   --main-padding: 0 5%;
 
@@ -10,8 +12,12 @@
   --light-text: rgb(255, 255, 255);
   --light-text-sec: rgb(200, 200, 200);
 
-  --light-border: rgb(200, 200, 200);
+  --light-border: rgba(200, 200, 200, 0.4);
   --dark-border: rgb(100, 100, 100);
+
+  --heading-font-size: 35px;
+  --font-size-lg: 16px;
+  --font-size-sm: 15px;
 
   --header-bg: rgba(0, 0, 0, 0.5);
 }
@@ -24,12 +30,24 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-
-  height: 250vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.main-div {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Merriweather', serif;
+}
+
+:root .section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .btn-gradient {
@@ -50,4 +68,43 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-gradient:hover {
   background-position: right center;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 1400px) {
+  :root {
+    --main-padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --main-padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --heading-font-size: 30px;
+    --font-size-lg: 15px;
+    --font-size-sm: 14px;
+    --btn-font-size: 12px;
+  }
+
+  :root .section-padding {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --main-padding: 0 5%;
+  }
+
+  :root .section-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }

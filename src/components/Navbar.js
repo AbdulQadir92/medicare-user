@@ -1,14 +1,18 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../css/components/navbar.css';
 
 
 const Navbar = () => {
 
+    const loc = useLocation();
+
+    console.log(loc.pathname);
+
     useEffect(() => {
         makeActive();
         if (window.innerWidth > 992) changeNavBg();
-    }, [])
+    }, [loc.pathname])
 
     const makeActive = () => {
         const links = document.querySelectorAll('.nav-link');
@@ -25,13 +29,13 @@ const Navbar = () => {
     }
 
     const changeNavBg = () => {
-        const header = document.querySelector('#header');
+        const header = document.querySelector('.header');
         const navbar = document.querySelector('#navbar');
         const links = navbar.querySelectorAll('.nav-link');
 
         window.addEventListener('scroll', () => {
             const _scrollY = window.scrollY;
-            const headerHeight = header.offsetHeight;
+            const headerHeight = header.offsetHeight - 150;
             const headerTop = header.offsetTop;
 
             if (_scrollY >= headerTop && _scrollY < headerTop + headerHeight) {

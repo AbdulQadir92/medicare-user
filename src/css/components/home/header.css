@@ -1,4 +1,4 @@
-#header {
+.header {
     position: relative;
 
     width: 100%;
@@ -42,8 +42,8 @@
 
 /* Media Queries */
 @media screen and (max-width: 992px) {
-    #header {
-        height: 50vh;
+    .header {
+        height: 80vh;
     }
 
     .header-msg h1,
@@ -53,26 +53,33 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header {
+        height: 70vh;
+    }
+
     .header-msg h1 {
         width: 90%;
         font-size: 35px;
-
     }
 
     .header-msg p {
         width: 90%;
-        font-size: 14px;
+        font-size: var(--font-size-sm);
     }
 
     .header-msg button {
         padding: 8px 15px;
-        font-size: 12px;
+        font-size: var(--btn-font-size);
     }
 }
 
 @media screen and (max-width: 576px) {
-    #header {
+    .header {
         height: 60vh;
+    }
+
+    .header-msg {
+        top: 55%;
     }
 
     .header-msg h1,
