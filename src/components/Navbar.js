@@ -40,11 +40,13 @@ const Navbar = () => {
 
             if (_scrollY >= headerTop && _scrollY < headerTop + headerHeight) {
                 navbar.style.backgroundColor = 'transparent';
+                navbar.style.boxShadow = '';
                 links.forEach(link => {
                     link.style.color = 'var(--light-text)';
                 })
             } else {
                 navbar.style.backgroundColor = 'var(--light-text)';
+                navbar.style.boxShadow = '0 3px 6px 0 rgb(0 0 0 / 5%)';
                 links.forEach(link => {
                     link.style.color = 'var(--dark-text)';
                 })
@@ -82,7 +84,9 @@ const Navbar = () => {
         <nav id="navbar">
             <div className="brand-container">
                 <div className="nav-brand">
-                    <h1>MediCare</h1>
+                    <h1>
+                        <Link to="/">MediCare</Link>
+                    </h1>
                 </div>
                 <span className="material-icons-outlined menu-icon" onClick={toggleNavbar}>menu</span>
             </div>

@@ -1,11 +1,11 @@
 import {Link} from 'react-router-dom';
 import '../../css/components/home/servicesSection.css';
-import heartBeat from '../../images/home/heartBeat.png';
-import eyeCare from '../../images/home/eyeCare.png';
-import dentistry from '../../images/home/dentistry.png';
-import hepatology from '../../images/home/hepatology.png';
-import urology from '../../images/home/urology.png';
-import gynaecology from '../../images/home/gynaecology.png'
+import heartBeat from '../../images/home/services/heartBeat.png';
+import eyeCare from '../../images/home/services/eyeCare.png';
+import dentistry from '../../images/home/services/dentistry.png';
+import hepatology from '../../images/home/services/hepatology.png';
+import urology from '../../images/home/services/urology.png';
+import gynaecology from '../../images/home/services/gynaecology.png'
 
 
 const ServicesSection = () => {
