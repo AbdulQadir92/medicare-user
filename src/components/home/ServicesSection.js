@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import '../../css/components/home/servicesSection.css';
 import heartBeat from '../../images/home/heartBeat.png';
 import eyeCare from '../../images/home/eyeCare.png';
@@ -57,7 +58,7 @@ const ServicesSection = () => {
                 </div>
             </div>
             <div className="btn-container">
-                <button className="btn-gradient" type="button">Learn More</button>
+                <Link className="btn-gradient btn-link" to="/services">Learn More</Link>
             </div>
         </section>
     )
