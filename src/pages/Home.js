@@ -1,6 +1,7 @@
 import '../css/pages/home.css';
 import Header from "../components/home/Header"
 import AboutSection from "../components/home/AboutSection"
+import ServicesSection from '../components/home/ServicesSection';
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <section id="home">
             <Header />
             <AboutSection />
+            <ServicesSection />
         </section>
     )
 }

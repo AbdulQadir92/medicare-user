@@ -2,7 +2,9 @@
   --main-color: #EB1D36;
   --main-bg: #f7f9fa;
   --light-bg: #fff;
-  --gradient: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+  /* --gradient: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%); */
+  --gradient: linear-gradient(to right, #548dd3 0%, #50c9c7 51%, #548dd3 100%);
+
 
   --main-padding: 0 5%;
 
@@ -15,9 +17,13 @@
   --light-border: rgba(200, 200, 200, 0.4);
   --dark-border: rgb(100, 100, 100);
 
+  --main-border-radius: 10px;
+
   --heading-font-size: 35px;
   --font-size-lg: 16px;
   --font-size-sm: 15px;
+
+  --main-heading-mb: 35px;
 
   --header-bg: rgba(0, 0, 0, 0.5);
 }
@@ -54,11 +60,15 @@ h6 {
   background-image: var(--gradient);
   background-size: 200% auto;
   color: var(--light-text);
-  padding: 10px 20px;
+  padding: 10px 25px;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.5s;
+}
+
+.btn-gradient:hover {
+  background-position: right center;
 }
 
 .btn-sm {
@@ -66,10 +76,10 @@ h6 {
   font-size: 12px;
 }
 
-.btn-gradient:hover {
-  background-position: right center;
+.btn-lg {
+  padding: 13px 35px;
+  font-size: 14px;
 }
-
 
 /* Media Queries */
 @media screen and (min-width: 1400px) {
@@ -81,6 +91,7 @@ h6 {
 @media screen and (max-width: 992px) {
   :root {
     --main-padding: 0 10%;
+    --main-heading-mb: 30px;
   }
 }
 
@@ -90,11 +101,17 @@ h6 {
     --font-size-lg: 15px;
     --font-size-sm: 14px;
     --btn-font-size: 12px;
+    --main-heading-mb: 25px;
   }
 
   :root .section-padding {
     padding-top: 45px;
     padding-bottom: 45px;
+  }
+
+  .btn-gradient {
+    padding: 7px 15px;
+    font-size: 12px;
   }
 }
 
