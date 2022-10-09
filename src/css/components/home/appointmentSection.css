@@ -2,3 +2,51 @@
     padding: var(--main-padding);
     background-color: var(--light-bg);
 }
+
+.appointment-section h1 {
+    font-size: var(--heading-font-size);
+    margin-bottom: var(--main-heading-mb);
+    text-align: center;
+    color: var(--dark-text);
+}
+
+.appointment-form {
+    width: 70%;
+    margin: 0 auto;
+
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--light-border);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.appointment-form .fields-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+    .appointment-form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .appointment-form .fields-container {
+        grid-column-gap: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .appointment-form .fields-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-row-gap: 20px;
+        margin-bottom: 20px;
+    }
+}

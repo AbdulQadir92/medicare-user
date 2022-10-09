@@ -50,10 +50,6 @@
     font-size: var(--font-size-sm);
 }
 
-.btn-container {
-    text-align: right;
-}
-
 
 /* Media Queries */
 @media screen and (max-width: 992px) {
