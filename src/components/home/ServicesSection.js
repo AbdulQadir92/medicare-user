@@ -5,7 +5,7 @@ import eyeCare from '../../images/home/services/eyeCare.png';
 import dentistry from '../../images/home/services/dentistry.png';
 import hepatology from '../../images/home/services/hepatology.png';
 import urology from '../../images/home/services/urology.png';
-import gynaecology from '../../images/home/services/gynaecology.png'
+import virology from '../../images/home/services/virology.png'
 
 
 const ServicesSection = () => {
@@ -37,8 +37,8 @@ const ServicesSection = () => {
 
                 <div className="service-card">
                     <div>
-                        <h2>Gynaecology</h2>
-                        <img src={gynaecology} alt="..." />
+                        <h2>Virology</h2>
+                        <img src={virology} alt="..." />
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quia</p>
                 </div>

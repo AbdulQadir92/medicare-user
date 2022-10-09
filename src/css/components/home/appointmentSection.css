@@ -1,0 +1,4 @@
+.appointment-section {
+    padding: var(--main-padding);
+    background-color: var(--light-bg);
+}

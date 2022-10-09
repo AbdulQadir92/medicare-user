@@ -11,6 +11,7 @@
 .services-section>h1 {
     font-size: var(--heading-font-size);
     margin-bottom: var(--main-heading-mb);
+    color: var(--dark-text);
     text-align: center;
 }
 

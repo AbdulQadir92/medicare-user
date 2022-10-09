@@ -15,7 +15,7 @@
   --light-text-sec: rgb(200, 200, 200);
 
   --light-border: rgba(200, 200, 200, 0.4);
-  --dark-border: rgb(100, 100, 100);
+  --dark-border: rgba(100, 100, 100, 0.4);
 
   --main-border-radius: 10px;
 

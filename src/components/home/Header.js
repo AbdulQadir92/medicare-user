@@ -8,7 +8,7 @@ const Header = () => {
             <div className="header-msg">
                 <h1>We Provide Best Care</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed quam perferendis hic, doloribus enim vitae libero illo vero non voluptatibus a, tenetur nam nobis.</p>
-                <button className="btn-gradient">Read More</button>
+                <button className="btn-gradient">Learn More</button>
             </div>
         </header>
     )

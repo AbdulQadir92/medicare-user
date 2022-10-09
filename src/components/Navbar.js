@@ -60,9 +60,11 @@ const Navbar = () => {
         const search = document.querySelector('.search');
 
         if (searchLinksContainer.classList.contains('cont-shown')) {
-            searchLinksContainer.classList.remove('cont-shown')
+            searchLinksContainer.classList.remove('cont-shown');
+            searchLinksContainer.parentElement.style.height = '60px';
         } else {
-            searchLinksContainer.classList.add('cont-shown')
+            searchLinksContainer.classList.add('cont-shown');
+            searchLinksContainer.parentElement.style.height = '300px';
         }
 
         toggleClass(navUl, 'd-none');
@@ -103,7 +105,7 @@ const Navbar = () => {
                         <Link to="/services" className="nav-link">Services</Link>
                     </li>
                     <li>
-                        <Link to="#" className="nav-link">Page</Link>
+                        <Link to="/doctors" className="nav-link">Doctors</Link>
                     </li>
                     <li>
                         <Link to="/contact" className="nav-link">Contact</Link>

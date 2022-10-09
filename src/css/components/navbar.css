@@ -110,9 +110,10 @@
         flex-direction: column;
         justify-content: flex-start;
 
-        height: 300px;
+        height: 60px;
         width: 100%;
         box-shadow: none;
+        transition: 0.4s;
     }
 
     .brand-container {
