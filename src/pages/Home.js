@@ -1,5 +1,6 @@
 import '../css/pages/home.css';
 import Header from "../components/home/Header"
+import InfoSection from '../components/home/InfoSection';
 import AboutSection from "../components/home/AboutSection"
 import ServicesSection from '../components/home/ServicesSection';
 import DoctorsSection from '../components/home/DoctorsSection';
@@ -13,6 +14,7 @@ const Home = () => {
             <AboutSection />
             <ServicesSection />
             <DoctorsSection />
+            <InfoSection />
             <AppointmentSection />
         </section>
     )
