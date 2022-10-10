@@ -46,7 +46,6 @@
 @media screen and (max-width: 768px) {
     .info-section {
         grid-template-columns: 100%;
-        /* grid-row-gap: 15px; */
     
         position: relative;
 
@@ -76,7 +75,7 @@
         top: 140px;
     }
 
-    /* .info-card span {
+    .info-card span {
         font-size: 25px;
-    } */
+    }
 }
