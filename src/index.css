@@ -25,6 +25,8 @@
 
   --main-heading-mb: 35px;
 
+  --icon-size: 20px;
+
   --header-bg: rgba(0, 0, 0, 0.5);
 }
 
@@ -163,13 +165,14 @@ h6 {
     --font-size-sm: 14px;
     --btn-font-size: 12px;
     --main-heading-mb: 25px;
+    --icon-size: 16px;
   }
 
   :root .section-padding {
     padding-top: 45px;
     padding-bottom: 45px;
   }
-
+  
   /* Buttons */
   .btn-gradient {
     padding: 7px 15px;

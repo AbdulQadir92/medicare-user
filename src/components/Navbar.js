@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../css/components/navbar.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass, faClose, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
 
@@ -90,11 +92,11 @@ const Navbar = () => {
                         <Link to="/">MediCare</Link>
                     </h1>
                 </div>
-                <span className="material-icons-outlined menu-icon" onClick={toggleNavbar}>menu</span>
+                <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleNavbar} />
             </div>
             <div className="search-links-container">
                 <ul className="nav-ul d-none">
-                    <span className="material-icons-outlined close-icon" onClick={toggleNavbar}>close</span>
+                    <FontAwesomeIcon icon={faClose} className="close-icon" onClick={toggleNavbar} />
                     <li>
                         <Link to="/" className="nav-link active">Home</Link>
                     </li>
@@ -114,7 +116,7 @@ const Navbar = () => {
                 <div className="search d-none">
                     <div>
                         <button>
-                            <span className="material-icons-outlined">search</span>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
                         </button>
                         <input type="search" placeholder="Search" />
                     </div>

@@ -17,10 +17,10 @@
     align-items: center;
 }
 
-.info-card span {
+.info-card .info-icon {
     color: var(--main-color);
     margin-right: 15px;
-    font-size: 30px;
+    font-size: var(--icon-size);
 }
 
 .info-card > div {

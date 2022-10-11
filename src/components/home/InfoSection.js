@@ -1,11 +1,13 @@
 import '../../css/components/home/infoSection.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot, faClock, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 const InfoSection = () => {
     return (
         <div className="info-section">
             <div className="info-card">
-                <span className="material-icons-outlined">location_on</span>
+                <FontAwesomeIcon icon={faLocationDot} className="info-icon" />
                 <div>
                     <p>34th Avenue</p>
                     <p>New York, S2 Honey Block</p>
@@ -13,7 +15,7 @@ const InfoSection = () => {
             </div>
 
             <div className="info-card">
-                <span className="material-icons-outlined">schedule</span>
+                <FontAwesomeIcon icon={faClock} className="info-icon" />
                 <div>
                     <p>Monday - Friday:&nbsp; 08 am - 06 pm</p>
                     <p>Saturday - Sunday:&nbsp; Closed </p>
@@ -21,7 +23,7 @@ const InfoSection = () => {
             </div>
 
             <div className="info-card">
-                <span className="material-icons-outlined">call</span>
+                <FontAwesomeIcon icon={faPhone} className="info-icon" />
                 <div>
                     <p>+0300 4456 0025</p>
                     <p>+0600 6854 0203</p>

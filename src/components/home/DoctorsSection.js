@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../css/components/home/doctorsSection.css';
 import doctor1 from '../../images/home/doctors/doctor1.jpg';
 import doctor2 from '../../images/home/doctors/doctor2.jpg';
@@ -8,9 +8,8 @@ import doctor4 from '../../images/home/doctors/doctor4.jpg';
 import doctor5 from '../../images/home/doctors/doctor5.jpg';
 import doctor6 from '../../images/home/doctors/doctor6.jpg';
 
-import facebookIcon from '../../images/home/doctors/icons/facebook.png';
-import twitterIcon from '../../images/home/doctors/icons/twitter.png';
-import googlePlusIcon from '../../images/home/doctors/icons/google-plus.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faGooglePlus } from '@fortawesome/free-brands-svg-icons';
 
 
 const DoctorsSection = () => {
@@ -33,15 +32,15 @@ const DoctorsSection = () => {
             <div className="img-container">
               <img src={doctor.image} alt="..." width="250" height="100" />
               <div className="social-icons">
-                <img src={facebookIcon} alt="..." width="18" height="18" />
-                <img src={twitterIcon} alt="..." width="18" height="18" />
-                <img src={googlePlusIcon} alt="..." width="18" height="18" />
+                <FontAwesomeIcon icon={faFacebook} className="social-icon" />
+                <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+                <FontAwesomeIcon icon={faGooglePlus} className="social-icon" />
               </div>
             </div>
             <div className="card-body">
               <h2>{doctor.name}</h2>
               <div className="designation">{doctor.designation}</div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Modi suscipit</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
             </div>
           </div>
         ))}

@@ -43,22 +43,21 @@
 /* Media Queries */
 @media screen and (max-width: 992px) {
     .header {
-        height: 80vh;
+        height: 550px;
     }
 
     .header-msg h1,
     .header-msg p {
-        width: 80%;
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .header {
-        height: 70vh;
+        height: 430px;
     }
 
     .header-msg h1 {
-        width: 90%;
         font-size: 35px;
     }
 
@@ -75,7 +74,7 @@
 
 @media screen and (max-width: 576px) {
     .header {
-        height: 60vh;
+        height: 310px;
     }
 
     .header-msg {
@@ -85,5 +84,13 @@
     .header-msg h1,
     .header-msg p {
         width: 100%;
+    }
+
+    .header-msg p {
+        margin: 10px auto 0;
+    }
+    
+    .header-msg button {
+        margin-top: 20px;
     }
 }
