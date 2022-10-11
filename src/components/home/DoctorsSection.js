@@ -14,14 +14,15 @@ import { faFacebook, faTwitter, faGooglePlus } from '@fortawesome/free-brands-sv
 
 const DoctorsSection = () => {
   const doctors = [
-    { name: 'Jone Smith', designation: "Cardiologist", image: doctor1 },
-    { name: 'Michael Hart', designation: "Eye Specialist", image: doctor2 },
-    { name: 'Harry Kane', designation: "Dental Surgeon", image: doctor4 },
-    { name: 'Mason Mount', designation: "Virologist", image: doctor3 },
-    { name: 'Thomas Aglio', designation: "Hepatologist", image: doctor5 },
-    { name: 'Terry Dubrow', designation: "Urologist", image: doctor6 }
+    { name: 'Jone Smith', designation: "Cardiologist", image: doctor1, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Michael Hart', designation: "Eye Specialist", image: doctor2, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Harry Kane', designation: "Dental Surgeon", image: doctor4, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Mason Mount', designation: "Virologist", image: doctor3, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Thomas Aglio', designation: "Hepatologist", image: doctor5, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Terry Dubrow', designation: "Urologist", image: doctor6, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' }
   ]
   const [data, setData] = useState(doctors);
+
 
   return (
     <div className="doctors-section section-padding">
@@ -32,9 +33,15 @@ const DoctorsSection = () => {
             <div className="img-container">
               <img src={doctor.image} alt="..." width="250" height="100" />
               <div className="social-icons">
-                <FontAwesomeIcon icon={faFacebook} className="social-icon" />
-                <FontAwesomeIcon icon={faTwitter} className="social-icon" />
-                <FontAwesomeIcon icon={faGooglePlus} className="social-icon" />
+                <a href="" target="_blank">
+                  <FontAwesomeIcon icon={faFacebook} className="social-icon" />
+                </a>
+                <a href="" target="_blank">
+                  <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+                </a>
+                <a href="" target="_blank">
+                  <FontAwesomeIcon icon={faGooglePlus} className="social-icon" />
+                </a>
               </div>
             </div>
             <div className="card-body">

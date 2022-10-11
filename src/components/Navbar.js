@@ -5,6 +5,7 @@ import '../css/components/navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faClose, faBars } from '@fortawesome/free-solid-svg-icons';
 
+
 const Navbar = () => {
 
     const loc = useLocation();

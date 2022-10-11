@@ -13,7 +13,6 @@ const InfoSection = () => {
                     <p>New York, S2 Honey Block</p>
                 </div>
             </div>
-
             <div className="info-card">
                 <FontAwesomeIcon icon={faClock} className="info-icon" />
                 <div>
@@ -21,7 +20,6 @@ const InfoSection = () => {
                     <p>Saturday - Sunday:&nbsp; Closed </p>
                 </div>
             </div>
-
             <div className="info-card">
                 <FontAwesomeIcon icon={faPhone} className="info-icon" />
                 <div>

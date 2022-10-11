@@ -190,6 +190,10 @@
     .nav-ul .nav-link {
         color: var(--dark-text);
     }
+
+    .search button {
+        padding: 4px 15px;
+    }
 }
 
 @media screen and (max-width: 768px) {

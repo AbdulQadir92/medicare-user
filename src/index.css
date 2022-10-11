@@ -1,10 +1,10 @@
 :root {
   --main-color: #EB1D36;
+
   --main-bg: #f7f9fa;
   --light-bg: #fff;
-  /* --gradient: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%); */
-  --gradient: linear-gradient(to right, #548dd3 0%, #50c9c7 51%, #548dd3 100%);
 
+  --gradient: linear-gradient(to right, #548dd3 0%, #50c9c7 51%, #548dd3 100%);
 
   --main-padding: 0 5%;
 
@@ -12,7 +12,7 @@
   --dark-text-sec: rgb(100, 100, 100);
 
   --light-text: rgb(255, 255, 255);
-  --light-text-sec: rgb(200, 200, 200);
+  --light-text-sec: rgb(180, 180, 180);
 
   --light-border: rgba(200, 200, 200, 0.4);
   --dark-border: rgba(100, 100, 100, 0.4);
@@ -28,6 +28,9 @@
   --icon-size: 20px;
 
   --header-bg: rgba(0, 0, 0, 0.5);
+
+  --footer-bg: #07121c;
+  --footer-bottom-bg: #060f18;
 }
 
 * {
