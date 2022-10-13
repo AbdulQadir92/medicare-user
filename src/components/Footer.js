@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../css/components/footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -5,6 +6,16 @@ import { faLocationDot, faClock, faPhone } from '@fortawesome/free-solid-svg-ico
 
 
 const Footer = () => {
+
+  const [email, setEmail] = useState('');
+
+  const handleNewsLetter = (e) => {
+    e.preventDefault();
+
+    console.log(email);
+    setEmail('');
+  }
+
   return (
     <footer className="footer">
       <div className="footer-main">
@@ -60,13 +71,13 @@ const Footer = () => {
         </div>
         <div>
           <h2>News Letter</h2>
-          <form className="news-letter-form">
+          <form className="news-letter-form" onSubmit={handleNewsLetter}>
             <p>Subscribe to our Newsletter to stay updated</p>
             <div>
               <button>
                 <span className="newsletter-btn">Subscribe</span>
               </button>
-              <input type="email" placeholder="Email Address" />
+              <input type="email" placeholder="Email Address" name="email" onChange={(e) => setEmail(e.target.value)} value={email} required="required"/>
             </div>
           </form>
         </div>

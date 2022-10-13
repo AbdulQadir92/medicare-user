@@ -1,21 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../css/components/navbar.css';
+import changeTheme from '../functions/changeTheme';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faClose, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faClose, faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 
 const Navbar = () => {
 
     const loc = useLocation();
 
-    console.log(loc.pathname);
+    const [searchText, setSearchText] = useState('');
+    const [currentTheme, setCurrentTheme] = useState('light');
 
     useEffect(() => {
         makeActive();
-        if (window.innerWidth > 992) changeNavBg();
-    }, [loc.pathname])
+        changeNavBg();
+    }, [loc.pathname, currentTheme])
 
     const makeActive = () => {
         const links = document.querySelectorAll('.nav-link');
@@ -41,18 +43,20 @@ const Navbar = () => {
             const headerHeight = header.offsetHeight - 150;
             const headerTop = header.offsetTop;
 
-            if (_scrollY >= headerTop && _scrollY < headerTop + headerHeight) {
-                navbar.style.backgroundColor = 'transparent';
-                navbar.style.boxShadow = '';
-                links.forEach(link => {
-                    link.style.color = 'var(--light-text)';
-                })
-            } else {
-                navbar.style.backgroundColor = 'var(--light-text)';
-                navbar.style.boxShadow = '0 3px 6px 0 rgb(0 0 0 / 5%)';
-                links.forEach(link => {
-                    link.style.color = 'var(--dark-text)';
-                })
+            if (window.innerWidth > 992) {
+                if (_scrollY >= headerTop && _scrollY < headerTop + headerHeight) {
+                    navbar.style.backgroundColor = 'transparent';
+                    navbar.style.boxShadow = '';
+                    links.forEach(link => {
+                        link.style.color = 'var(--nav-light-text)';
+                    })
+                } else {
+                    navbar.style.backgroundColor = 'var(--light-bg)';
+                    navbar.style.boxShadow = '0 3px 6px 0 rgb(0 0 0 / 5%)';
+                    links.forEach(link => {
+                        link.style.color = 'var(--nav-dark-text)';
+                    })
+                }
             }
         })
     }
@@ -84,6 +88,14 @@ const Navbar = () => {
         }
     }
 
+    const handleSearch = () => {
+        console.log(searchText);
+    }
+
+    const toggleTheme = (theme) => {
+        setCurrentTheme(theme);
+        changeTheme(currentTheme);
+    }
 
     return (
         <nav id="navbar">
@@ -92,6 +104,14 @@ const Navbar = () => {
                     <h1>
                         <Link to="/">MediCare</Link>
                     </h1>
+                </div>
+                <div className="theme-icons-container">
+                    {currentTheme === 'light' && (
+                        <FontAwesomeIcon icon={faMoon} className="moon-icon" onClick={() => toggleTheme('dark')} data-themeicon />
+                    )}
+                    {currentTheme === 'dark' && (
+                        <FontAwesomeIcon icon={faSun} className="sun-icon" onClick={() => toggleTheme('light')} data-themeicon />
+                    )}
                 </div>
                 <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleNavbar} />
             </div>
@@ -117,9 +137,9 @@ const Navbar = () => {
                 <div className="search d-none">
                     <div>
                         <button>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
+                            <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" onClick={handleSearch} />
                         </button>
-                        <input type="search" placeholder="Search" />
+                        <input type="search" placeholder="Search" onChange={(e) => setSearchText(e.target.value)} value={searchText} required="required" />
                     </div>
                 </div>
             </div>

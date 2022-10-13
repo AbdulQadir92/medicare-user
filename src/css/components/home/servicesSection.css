@@ -39,6 +39,7 @@
 
 .service-card h2 {
     font-size: var(--card-heading-font-size);
+    color: var(--dark-text);
 }
 
 .service-card img {
@@ -48,6 +49,7 @@
 .service-card p {
     text-align: justify;
     font-size: var(--font-size-sm);
+    color: var(--dark-text-sec);
 }
 
 

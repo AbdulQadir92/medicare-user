@@ -26,7 +26,7 @@
 .footer-main > div > h2 {
     font-size: 22px;
     margin-bottom: 25px;
-    color: var(--light-text);
+    color: var(--nav-light-text);
 }
 
 .contact-us-cards > div {
@@ -65,7 +65,7 @@
 }
 
 .useful-links-ul a:hover {
-    color: var(--light-text);
+    color: var(--nav-light-text);
 }
 
 .news-letter-form {
@@ -89,6 +89,8 @@
     padding: 9px 15px;
     border-radius: 30px;
     border: 1px solid var(--light-border);
+    background-color: var(--light-bg);
+    color: var(--nav-dark-text);
 }
 
 .news-letter-form input:focus {
@@ -104,7 +106,7 @@
     border-radius: 30px;
     border: none;
     background-color: var(--main-color);
-    color: var(--light-text);
+    color: var(--nav-light-text);
     cursor: pointer;
 }
 

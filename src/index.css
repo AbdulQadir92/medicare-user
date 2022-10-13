@@ -4,9 +4,13 @@
   --main-bg: #f7f9fa;
   --light-bg: #fff;
 
-  --gradient: linear-gradient(to right, #548dd3 0%, #50c9c7 51%, #548dd3 100%);
+  --nav-dark-text: rgb(0, 0, 0);
+  --nav-light-text: rgb(255, 255, 255);
 
-  --main-padding: 0 5%;
+  --btn-dark-text: rgb(0, 0, 0);
+  --btn-light-text: rgb(255, 255, 255);
+
+  --gradient: linear-gradient(to right, #548dd3 0%, #50c9c7 51%, #548dd3 100%);
 
   --dark-text: rgb(0, 0, 0);
   --dark-text-sec: rgb(100, 100, 100);
@@ -17,6 +21,14 @@
   --light-border: rgba(200, 200, 200, 0.4);
   --dark-border: rgba(100, 100, 100, 0.4);
 
+  --header-bg: rgba(0, 0, 0, 0.5);
+
+  --footer-bg: #07121c;
+  --footer-bottom-bg: #060f18;
+
+
+  --main-padding: 0 5%;
+
   --main-border-radius: 10px;
 
   --heading-font-size: 35px;
@@ -26,12 +38,41 @@
   --main-heading-mb: 35px;
 
   --icon-size: 20px;
+}
+
+
+/* :root {
+  --main-color: #EB1D36;
+
+  --main-bg: #060f18;
+  --light-bg: #07121c;
+
+  --btn-dark-text: rgb(255, 255, 255);
+  --btn-light-text: rgb(255, 255, 255);
+
+  --nav-dark-text: rgb(255, 255, 255);
+  --nav-light-text: rgb(255, 255, 255);
+
+  --gradient: linear-gradient(to right, #548dd3 0%, #50c9c7 51%, #548dd3 100%);
+
+  --dark-text: rgb(255, 255, 255);
+  --dark-text-sec: rgb(180, 180, 180);
+
+  --light-text: rgb(0, 0, 0);
+  --light-text-sec: rgb(180, 180, 180);
+
+  --light-border: rgba(100, 100, 100, 0.4);
+  --dark-border: rgba(200, 200, 200, 0.4);
 
   --header-bg: rgba(0, 0, 0, 0.5);
 
-  --footer-bg: #07121c;
-  --footer-bottom-bg: #060f18;
-}
+  --footer-bg: #060f18;
+  --footer-bottom-bg: #07121c;
+} */
+
+
+
+
 
 * {
   box-sizing: border-box;
@@ -65,7 +106,7 @@ h6 {
 /* Buttons */
 .btn-regular {
   background-color: var(--main-color);
-  color: var(--light-text);
+  color: var(--btn-light-text);
   padding: 8px 23px;
   border: 2px solid var(--main-color);
   border-radius: 5px;
@@ -77,13 +118,13 @@ h6 {
 .btn-regular:hover {
   border: 2px solid var(--main-color);
   background-color: var(--light-bg);
-  color: var(--dark-text);
+  color: var(--btn-dark-text);
 }
 
 .btn-gradient {
   background-image: var(--gradient);
   background-size: 200% auto;
-  color: var(--light-text);
+  color: var(--btn-light-text);
   padding: 8px 23px;
   border: 2px solid transparent;
   border-radius: 5px;
@@ -118,14 +159,17 @@ h6 {
   display: block;
   margin-bottom: 5px;
   font-size: var(--font-size-sm);
+  color: var(--dark-text);
 }
 
-.input-field, .select-field {
+.input-field,
+.select-field {
   display: block;
   width: 100%;
   padding: 8px 10px;
   border-radius: 5px;
   border: 1px solid var(--dark-border);
+  background-color: var(--light-bg);
   color: var(--dark-text-sec);
 }
 
@@ -133,9 +177,11 @@ h6 {
   padding: 6.5px 10px;
   border-radius: 5px;
   border: 1px solid var(--dark-border);
+  color: var(--dark-text-sec);
 }
 
-.input-field:focus, .select-field:focus {
+.input-field:focus,
+.select-field:focus {
   border: 1px solid transparent;
   outline: 1px solid var(--main-color);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
@@ -143,6 +189,7 @@ h6 {
 
 .select-field option {
   font-size: var(--font-size-sm);
+  color: var(--dark-text-sec);
 }
 
 
@@ -175,7 +222,7 @@ h6 {
     padding-top: 45px;
     padding-bottom: 45px;
   }
-  
+
   /* Buttons */
   .btn-gradient {
     padding: 7px 15px;
@@ -194,13 +241,14 @@ h6 {
 
 
   /* Form */
-  .input-field, .select-field {
+  .input-field,
+  .select-field {
     padding: 6px 10px;
   }
-  
+
   .input-field[type=time] {
     padding: 4.5px 10px;
-  }  
+  }
 }
 
 @media screen and (max-width: 576px) {
