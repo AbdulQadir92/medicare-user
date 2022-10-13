@@ -107,7 +107,7 @@
 
 .theme-icons-container {
     position: absolute;
-    top: 16px;
+    top: 17px;
     right: 1.5%;
 
     font-size: 18px;
@@ -116,15 +116,15 @@
     border-radius: 50%;
 }
 
+.moon-icon {
+    cursor: pointer;
+    padding: 4px 8px 2px;
+}
+
 .sun-icon {
     cursor: pointer;
     font-size: 16px;
     padding: 5px 7px 3px;
-}
-
-.moon-icon {
-    cursor: pointer;
-    padding: 4px 8px 2px;
 }
 
 
@@ -218,9 +218,19 @@
 
     .theme-icons-container {
         top: 13px;
-        right: 15%;
+        right: 15%;    
+    }
+
+    .moon-icon {
+        cursor: pointer;
+        font-size: 16px;
+        padding: 2.5px 8px 2px;
+    }
     
-        font-size: var(--icon-size);
+    .sun-icon {
+        cursor: pointer;
+        font-size: 16px;
+        padding: 5px 7px 3px;
     }
 }
 
@@ -245,13 +255,21 @@
     }
 
     .theme-icons-container {
-        top: 15px;
-        right: 15%;
+        top: 13px;
+
+        font-size: var(--icon-size);
     }
 }
 
 @media screen and (max-width: 576px) {
     .search > div {
         width: 80%;
+    }
+
+    .theme-icons-container {
+        top: 13px;
+        right: 13%;
+
+        font-size: var(--icon-size);
     }
 }
