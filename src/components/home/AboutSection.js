@@ -1,5 +1,5 @@
 import '../../css/components/home/aboutSection.css';
-import happyPatient from '../../images/home/happyPatient2.jpg';
+import happyPatient from '../../images/home/happyPatient.jpg';
 
 
 const AboutSection = () => {

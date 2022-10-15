@@ -1,0 +1,57 @@
+.patients {
+    padding: var(--main-padding);
+    background-color: var(--light-bg);
+}
+
+.patients > h2 {
+    font-size: var(--heading-font-size);
+    margin-bottom: var(--main-heading-mb);
+    color: var(--dark-text);
+    text-align: center;
+}
+
+.patient-card {
+    display: flex;
+    margin-bottom: var(--sec-heading-mb);
+}
+
+.patient-card > img {
+    width: 130px;
+    height: 130px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.patient-card > div {
+    padding-left: 3%;
+    font-weight: bold;
+}
+
+.patient-card > div > p {
+    color: var(--dark-text);
+    font-size: var(--font-size-lg);
+    margin-bottom: 10px;
+}
+
+.patient-name {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.patient-profession {
+    color: var(--dark-text-sec);
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .patient-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .patient-card > div {
+        margin-top: 15px;
+    }
+}

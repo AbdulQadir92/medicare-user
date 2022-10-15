@@ -1,0 +1,9 @@
+
+
+
+@media screen and (max-width: 992px) {
+    .right-img-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }    
+}

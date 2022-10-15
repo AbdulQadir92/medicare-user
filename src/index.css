@@ -32,10 +32,13 @@
   --main-border-radius: 10px;
 
   --heading-font-size: 35px;
-  --font-size-lg: 16px;
-  --font-size-sm: 15px;
+  --sec-heading-font-size: 30px;
 
   --main-heading-mb: 35px;
+  --sec-heading-mb: 30px;
+
+  --font-size-lg: 16px;
+  --font-size-sm: 15px;
 
   --icon-size: 20px;
 }
@@ -71,9 +74,6 @@
 } */
 
 
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -84,9 +84,9 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.main-div {
+/* .main-div {
   min-height: 100vh;
-}
+} */
 
 h1,
 h2,

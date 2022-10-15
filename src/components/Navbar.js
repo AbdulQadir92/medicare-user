@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../css/components/navbar.css';
-import changeTheme from '../functions/changeTheme';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faClose, faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+
+import changeTheme from '../functions/navbar/changeTheme';
+import changeNavBg from '../functions/navbar/changeNavBg';
+import toggleNavbar from '../functions/navbar/toggleNavbar';
 
 
 const Navbar = () => {
@@ -31,61 +34,6 @@ const Navbar = () => {
                 link.classList.add('active');
             })
         })
-    }
-
-    const changeNavBg = () => {
-        const header = document.querySelector('.header');
-        const navbar = document.querySelector('#navbar');
-        const links = navbar.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            const _scrollY = window.scrollY;
-            const headerHeight = header.offsetHeight - 150;
-            const headerTop = header.offsetTop;
-
-            if (window.innerWidth > 992) {
-                if (_scrollY >= headerTop && _scrollY < headerTop + headerHeight) {
-                    navbar.style.backgroundColor = 'transparent';
-                    navbar.style.boxShadow = '';
-                    links.forEach(link => {
-                        link.style.color = 'var(--nav-light-text)';
-                    })
-                } else {
-                    navbar.style.backgroundColor = 'var(--light-bg)';
-                    navbar.style.boxShadow = '0 3px 6px 0 rgb(0 0 0 / 5%)';
-                    links.forEach(link => {
-                        link.style.color = 'var(--nav-dark-text)';
-                    })
-                }
-            }
-        })
-    }
-
-    const toggleNavbar = () => {
-        const searchLinksContainer = document.querySelector('.search-links-container');
-        const navUl = document.querySelector('.nav-ul');
-        const search = document.querySelector('.search');
-
-        if (searchLinksContainer.classList.contains('cont-shown')) {
-            searchLinksContainer.classList.remove('cont-shown');
-            searchLinksContainer.parentElement.style.height = '60px';
-        } else {
-            searchLinksContainer.classList.add('cont-shown');
-            searchLinksContainer.parentElement.style.height = '300px';
-        }
-
-        toggleClass(navUl, 'd-none');
-        toggleClass(search, 'd-none');
-    }
-
-    const toggleClass = (element, cls) => {
-        if (element.classList.contains(cls)) {
-            setTimeout(() => {
-                element.classList.remove(cls)
-            }, 200)
-        } else {
-            element.classList.add(cls)
-        }
     }
 
     const handleSearch = () => {
