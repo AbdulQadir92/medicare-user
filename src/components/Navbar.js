@@ -8,6 +8,7 @@ import { faMagnifyingGlass, faClose, faBars, faMoon, faSun } from '@fortawesome/
 import changeTheme from '../functions/navbar/changeTheme';
 import changeNavBg from '../functions/navbar/changeNavBg';
 import toggleNavbar from '../functions/navbar/toggleNavbar';
+import makeActive from '../functions/navbar/makeActive';
 
 
 const Navbar = () => {
@@ -18,42 +19,34 @@ const Navbar = () => {
     const [currentTheme, setCurrentTheme] = useState('light');
 
     useEffect(() => {
-        makeActive();
+        makeActive(loc);
         changeNavBg();
     }, [loc.pathname, currentTheme])
 
-    const makeActive = () => {
-        const links = document.querySelectorAll('.nav-link');
-        links.forEach(link => {
-          
-            if (link.innerText.toLowerCase() === loc.pathname.slice(1)) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-
-            if(link.innerText.toLowerCase() === 'home' && loc.pathname === '/') {
-                link.classList.add('active');
-            }
-
-            link.addEventListener('click', () => {
-                links.forEach(link => {
-                    if (link.classList.contains('active')) {
-                        link.classList.remove('active');
-                    }
-                })
-                link.classList.add('active');
-            })
-        })
-    }
+    useEffect(() => {
+        themeOnLoad();
+    }, [])
 
     const handleSearch = () => {
         console.log(searchText);
     }
 
+    const themeOnLoad = () => {
+        const _theme = localStorage.getItem('theme');
+        if (!_theme) {
+            localStorage.setItem('theme', 'light');
+            setCurrentTheme('light');
+        } else {
+            setCurrentTheme(_theme);
+            changeTheme(_theme);
+        }
+    }
+
     const toggleTheme = (theme) => {
+        localStorage.setItem('theme', theme);
         setCurrentTheme(theme);
-        changeTheme(currentTheme);
+        const _theme = localStorage.getItem('theme');
+        changeTheme(_theme);
     }
 
     return (

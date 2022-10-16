@@ -1,9 +1,11 @@
 
 
-const changeTheme = (currentTheme) => {
+const changeTheme = (theme) => {
+    console.log(theme);
+
     const rootStyle = document.querySelector(':root').style;
 
-    if (currentTheme === 'light') {
+    if (theme === 'dark') {
         // Changing variable values to dark theme
         rootStyle.setProperty('--main-bg', '#060f18');
         rootStyle.setProperty('--light-bg', '#07121c');
@@ -23,7 +25,7 @@ const changeTheme = (currentTheme) => {
         rootStyle.setProperty('--footer-bottom-bg', '#07121c');
     }
 
-    if (currentTheme === 'dark') {
+    if (theme === 'light') {
         // Changing variable values to light theme
         rootStyle.setProperty('--main-bg', '#f7f9fa');
         rootStyle.setProperty('--light-bg', '#fff');
