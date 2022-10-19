@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../css/components/home/servicesSection.css';
+
 import heartBeat from '../../images/home/services/heartBeat.png';
 import eyeCare from '../../images/home/services/eyeCare.png';
 import dentistry from '../../images/home/services/dentistry.png';
@@ -21,13 +22,18 @@ const ServicesSection = () => {
     ]
 
     const [data, setData] = useState(services);
+    const navigate = useNavigate();
+
+    const navigateToServices = () => {
+        navigate('/services')
+    }
 
     return (
         <section className="services-section section-padding">
             <h1>What We Provide</h1>
             <div className="service-card-container">
                 {data && data.map((service, index) => (
-                    <div className="service-card" key={index}>
+                    <div className="service-card" key={index} onClick={navigateToServices}>
                         <div>
                             <h2>{service.service}</h2>
                             <img src={service.image} alt="..." />

@@ -27,6 +27,7 @@
 .service-card {
     border-radius: var(--main-border-radius);
     padding: 15px 0;
+    cursor: pointer;
 }
 
 .service-card>div {

@@ -1,4 +1,4 @@
-import '../../css/components/home/infoSection.css';
+import '../css/components/infoSection.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faClock, faPhone } from '@fortawesome/free-solid-svg-icons';
 

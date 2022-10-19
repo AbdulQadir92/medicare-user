@@ -1,9 +1,13 @@
-
+import PagesHeader from "../components/PagesHeader"
+import Service from "../components/services/ServiceSection"
+import InfoSection from "../components/InfoSection"
 
 const Services = () => {
   return (
     <div>
-      Services
+      <PagesHeader msgHeading={'Our Services'} msgBody={'Services'} />
+      <Service />
+      <InfoSection />
     </div>
   )
 }
