@@ -9,7 +9,9 @@ const Contact = () => {
     <div>
       <PagesHeader msgHeading={'Contact Us'} msgBody={'Contact'} />
       <ContactForm />
-      <MapContainer />
+      <div className="map-container section-padding">
+        <MapContainer />
+      </div>
       <InfoSection />
     </div>
   )

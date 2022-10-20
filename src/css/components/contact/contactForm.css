@@ -1,6 +1,6 @@
 .contact-section {
     padding: var(--main-padding);
-    background-color: var(--light-bg);
+    background-color: var(--main-bg);
 }
 
 .contact-section h1 {
@@ -30,6 +30,13 @@
 
 .contact-msg {
     grid-column: 1 / 3;
+}
+
+
+/* Map Container */
+.map-container {
+    padding: var(--main-padding);
+    background-color: var(--light-bg);
 }
 
 
