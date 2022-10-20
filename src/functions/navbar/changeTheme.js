@@ -1,8 +1,6 @@
 
 
 const changeTheme = (theme) => {
-    console.log(theme);
-
     const rootStyle = document.querySelector(':root').style;
 
     if (theme === 'dark') {
@@ -27,6 +25,7 @@ const changeTheme = (theme) => {
 
     if (theme === 'light') {
         // Changing variable values to light theme
+
         rootStyle.setProperty('--main-bg', '#f7f9fa');
         rootStyle.setProperty('--light-bg', '#fff');
         rootStyle.setProperty('--btn-dark-text', 'rgb(0, 0, 0)');
