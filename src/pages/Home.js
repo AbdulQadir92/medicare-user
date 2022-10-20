@@ -9,14 +9,14 @@ import AppointmentSection from '../components/home/AppointmentSection';
 
 const Home = () => {
     return (
-        <section id="home">
+        <div>
             <Header />
             <AboutSection />
             <ServicesSection />
             <DoctorsSection />
             <InfoSection />
             <AppointmentSection />
-        </section>
+        </div>
     )
 }
 

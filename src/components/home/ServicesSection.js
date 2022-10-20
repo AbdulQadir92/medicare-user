@@ -33,10 +33,10 @@ const ServicesSection = () => {
             <h1>What We Provide</h1>
             <div className="service-card-container">
                 {data && data.map((service, index) => (
-                    <div className="service-card" key={index} onClick={navigateToServices}>
+                    <div className="service-card" key={index}>
                         <div>
-                            <h2>{service.service}</h2>
-                            <img src={service.image} alt="..." />
+                            <h2  onClick={navigateToServices}>{service.service}</h2>
+                            <img src={service.image} alt="..."  onClick={navigateToServices} />
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatem</p>
                     </div>

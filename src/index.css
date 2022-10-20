@@ -84,10 +84,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* .main-div {
-  min-height: 100vh;
-} */
-
 h1,
 h2,
 h3,
@@ -193,11 +189,10 @@ h6 {
 }
 
 
-
 /* Media Queries */
 @media screen and (min-width: 1400px) {
   :root {
-    --main-padding: 0 10%;
+    --main-padding: 0 20%;
   }
 }
 

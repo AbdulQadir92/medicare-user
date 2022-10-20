@@ -87,6 +87,7 @@
     font-size: 18px;
     margin-bottom: 5px;
     color: var(--dark-text);
+    cursor: pointer;
 }
 
 .card-body .designation {

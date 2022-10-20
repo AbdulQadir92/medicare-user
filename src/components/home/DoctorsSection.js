@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../css/components/home/doctorsSection.css';
+
 import doctor1 from '../../images/home/doctors/doctor1.jpg';
 import doctor2 from '../../images/home/doctors/doctor2.jpg';
 import doctor3 from '../../images/home/doctors/doctor3.jpg';
@@ -23,6 +24,11 @@ const DoctorsSection = () => {
   ]
   const [data, setData] = useState(doctors);
 
+  const navigate = useNavigate();
+
+  const navigateToDoctors = () => {
+    navigate('/doctors')
+  }
 
   return (
     <div className="doctors-section section-padding">
@@ -45,7 +51,7 @@ const DoctorsSection = () => {
               </div>
             </div>
             <div className="card-body">
-              <h2>{doctor.name}</h2>
+              <h2 onClick={navigateToDoctors}>{doctor.name}</h2>
               <div className="designation">{doctor.designation}</div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
             </div>
