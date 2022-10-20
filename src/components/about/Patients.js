@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import '../../css/components/about/patients.css';
-import patient1 from '../../images/about/patient1.jpg';
-import patient2 from '../../images/about/patient2.png';
-import patient3 from '../../images/about/patient3.jpg';
+import patient1 from '../../imagesMin/about/patient1-min.jpg';
+import patient2 from '../../imagesMin/about/patient2-min.png';
+import patient3 from '../../imagesMin/about/patient3-min.jpg';
 
 
 const Patients = () => {

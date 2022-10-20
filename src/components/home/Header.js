@@ -1,5 +1,5 @@
 import '../../css/components/home/header.css';
-import headerImage from '../../images/home/header.jpg';
+import headerImage from '../../imagesMin/home/header-min.jpg';
 
 
 const Header = () => {

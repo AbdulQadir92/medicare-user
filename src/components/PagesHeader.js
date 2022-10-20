@@ -1,5 +1,5 @@
 import '../css/components/pagesHeader.css';
-import headerImage from '../images/home/header.jpg';
+import headerImage from '../imagesMin/home/header-min.jpg';
 import { Link } from 'react-router-dom';
 
 

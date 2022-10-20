@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../css/components/home/servicesSection.css';
 
-import heartBeat from '../../images/home/services/heartBeat.png';
-import eyeCare from '../../images/home/services/eyeCare.png';
-import dentistry from '../../images/home/services/dentistry.png';
-import virology from '../../images/home/services/virology.png'
-import hepatology from '../../images/home/services/hepatology.png';
-import urology from '../../images/home/services/urology.png';
+import heartBeat from '../../imagesMin/home/services/heartBeat-min.png';
+import eyeCare from '../../imagesMin/home/services/eyeCare-min.png';
+import dentistry from '../../imagesMin/home/services/dentistry-min.png';
+import virology from '../../imagesMin/home/services/virology-min.png'
+import hepatology from '../../imagesMin/home/services/hepatology-min.png';
+import urology from '../../imagesMin/home/services/urology-min.png';
 
 
 const ServicesSection = () => {

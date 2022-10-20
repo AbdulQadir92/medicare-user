@@ -4,8 +4,8 @@ import RightImgSection from '../components/about/RightImgSection';
 import Patients from "../components/about/Patients";
 import InfoSection from "../components/InfoSection";
 
-import careSection from '../images/about/careSection.jpg';
-import doSection from '../images/about/doSection.jpg';
+import careSection from '../imagesMin/about/careSection-min.jpg';
+import doSection from '../imagesMin/about/doSection-min.jpg';
 
 
 const About = () => {

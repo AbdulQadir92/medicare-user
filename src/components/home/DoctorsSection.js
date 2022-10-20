@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../css/components/home/doctorsSection.css';
 
-import doctor1 from '../../images/home/doctors/doctor1.jpg';
-import doctor2 from '../../images/home/doctors/doctor2.jpg';
-import doctor3 from '../../images/home/doctors/doctor3.jpg';
-import doctor4 from '../../images/home/doctors/doctor4.jpg';
-import doctor5 from '../../images/home/doctors/doctor5.jpg';
-import doctor6 from '../../images/home/doctors/doctor6.jpg';
+import doctor1 from '../../imagesMin/home/doctors/doctor1-min.jpg';
+import doctor2 from '../../imagesMin/home/doctors/doctor2-min.jpg';
+import doctor3 from '../../imagesMin/home/doctors/doctor3-min.jpg';
+import doctor4 from '../../imagesMin/home/doctors/doctor4-min.jpg';
+import doctor5 from '../../imagesMin/home/doctors/doctor5-min.jpg';
+import doctor6 from '../../imagesMin/home/doctors/doctor6-min.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faGooglePlus } from '@fortawesome/free-brands-svg-icons';
