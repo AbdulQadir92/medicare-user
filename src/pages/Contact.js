@@ -1,6 +1,7 @@
 import PagesHeader from "../components/PagesHeader";
 import ContactForm from "../components/contact/ContactForm";
 import InfoSection from "../components/InfoSection";
+import MapContainer from "../components/contact/MapContainer";
 
 
 const Contact = () => {
@@ -8,6 +9,7 @@ const Contact = () => {
     <div>
       <PagesHeader msgHeading={'Contact Us'} msgBody={'Contact'} />
       <ContactForm />
+      <MapContainer />
       <InfoSection />
     </div>
   )
