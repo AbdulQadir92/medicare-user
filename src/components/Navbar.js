@@ -32,9 +32,9 @@ const Navbar = () => {
     }
 
     const themeOnLoad = () => {
-        const _theme = localStorage.getItem('theme');
+        const _theme = localStorage.getItem('medicareTheme');
         if (!_theme) {
-            localStorage.setItem('theme', 'light');
+            localStorage.setItem('medicareTheme', 'light');
             setCurrentTheme('light');
         } else {
             setCurrentTheme(_theme);
@@ -43,9 +43,9 @@ const Navbar = () => {
     }
 
     const toggleTheme = (theme) => {
-        localStorage.setItem('theme', theme);
+        localStorage.setItem('medicareTheme', theme);
         setCurrentTheme(theme);
-        const _theme = localStorage.getItem('theme');
+        const _theme = localStorage.getItem('medicareTheme');
         changeTheme(_theme);
     }
 
