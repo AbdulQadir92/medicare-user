@@ -49,3 +49,9 @@
         height: 40vh;
     }
 }
+
+@media screen and (max-width: 300px) {
+    .pages-header-msg h2 {
+        width: 80%;
+    }
+}

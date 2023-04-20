@@ -12,9 +12,7 @@ import makeActive from '../functions/navbar/makeActive';
 
 
 const Navbar = () => {
-
     const loc = useLocation();
-
     const [searchText, setSearchText] = useState('');
     const [currentTheme, setCurrentTheme] = useState('light');
 

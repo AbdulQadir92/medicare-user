@@ -43,6 +43,10 @@
 }
 
 @media screen and (max-width: 576px) {
+    .appointment-form {
+        padding: 30px 15px;
+    }
+
     .appointment-form .fields-container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         grid-row-gap: 20px;

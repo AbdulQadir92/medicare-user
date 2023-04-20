@@ -17,19 +17,19 @@
     padding-bottom: 30px;
 }
 
-.footer-main > div {
+.footer-main>div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.footer-main > div > h2 {
+.footer-main>div>h2 {
     font-size: 22px;
     margin-bottom: 25px;
     color: var(--nav-light-text);
 }
 
-.contact-us-cards > div {
+.contact-us-cards>div {
     margin-bottom: 30px;
     text-align: center;
 }
@@ -48,13 +48,14 @@
 .about-us-para {
     font-size: var(--footer-font-size);
     color: var(--light-text-sec);
+    text-align: center;
 }
 
 .useful-links-ul {
     list-style-type: none;
 }
 
-.useful-links-ul > li {
+.useful-links-ul>li {
     margin-bottom: 15px;
 }
 
@@ -73,14 +74,14 @@
     text-align: right;
 }
 
-.news-letter-form > p {
+.news-letter-form>p {
     color: var(--light-text-sec);
-    font-size: var(--footer-font-size);   
+    font-size: var(--footer-font-size);
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
 }
 
-.news-letter-form > div {
+.news-letter-form>div {
     position: relative;
 }
 
@@ -142,7 +143,7 @@
         grid-row-gap: 40px;
     }
 
-    .contact-us-cards > div {
+    .contact-us-cards>div {
         margin-bottom: 20px;
     }
 
@@ -154,7 +155,7 @@
         width: 100%;
     }
 
-    .useful-links-ul > li {
+    .useful-links-ul>li {
         margin-bottom: 10px;
     }
 
@@ -162,7 +163,7 @@
         width: 75%;
     }
 
-    .news-letter-form > p {
+    .news-letter-form>p {
         margin-bottom: 10px;
         text-align: center;
     }

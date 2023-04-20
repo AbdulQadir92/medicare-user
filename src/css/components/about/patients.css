@@ -3,7 +3,7 @@
     background-color: var(--light-bg);
 }
 
-.patients > h2 {
+.patients>h2 {
     font-size: var(--heading-font-size);
     margin-bottom: var(--main-heading-mb);
     color: var(--dark-text);
@@ -15,19 +15,19 @@
     margin-bottom: var(--sec-heading-mb);
 }
 
-.patient-card > img {
+.patient-card>img {
     width: 130px;
     height: 130px;
     background-repeat: no-repeat;
     border-radius: 50%;
 }
 
-.patient-card > div {
+.patient-card>div {
     padding-left: 3%;
     font-weight: bold;
 }
 
-.patient-card > div > p {
+.patient-card>div>p {
     color: var(--dark-text);
     font-size: var(--font-size-lg);
     margin-bottom: 10px;
@@ -49,9 +49,10 @@
     .patient-card {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 50px;
     }
 
-    .patient-card > div {
+    .patient-card>div {
         margin-top: 15px;
     }
 }

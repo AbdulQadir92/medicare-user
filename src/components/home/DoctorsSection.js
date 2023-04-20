@@ -1,27 +1,18 @@
 import { Link, useNavigate } from 'react-router-dom';
 import '../../css/components/home/doctorsSection.css';
-
-import doctor1 from '../../imagesMin/home/doctors/doctor1-min.jpg';
-import doctor2 from '../../imagesMin/home/doctors/doctor2-min.jpg';
-import doctor3 from '../../imagesMin/home/doctors/doctor3-min.jpg';
-import doctor4 from '../../imagesMin/home/doctors/doctor4-min.jpg';
-import doctor5 from '../../imagesMin/home/doctors/doctor5-min.jpg';
-import doctor6 from '../../imagesMin/home/doctors/doctor6-min.jpg';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faGooglePlus } from '@fortawesome/free-brands-svg-icons';
 
 
 const DoctorsSection = () => {
   const doctors = [
-    { name: 'Jone Smith', designation: "Cardiologist", image: doctor1, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
-    { name: 'Michael Hart', designation: "Eye Specialist", image: doctor2, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
-    { name: 'Harry Kane', designation: "Dental Surgeon", image: doctor4, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
-    { name: 'Mason Mount', designation: "Virologist", image: doctor3, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
-    { name: 'Thomas Aglio', designation: "Hepatologist", image: doctor5, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
-    { name: 'Terry Dubrow', designation: "Urologist", image: doctor6, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' }
+    { name: 'Jone Smith', designation: "Cardiologist", image: '/images/doctors/doctor1-min.jpg', facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Michael Hart', designation: "Eye Specialist", image: '/images/doctors/doctor2-min.jpg', facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Mason Mount', designation: "Virologist", image: '/images/doctors/doctor3-min.jpg', facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Harry Kane', designation: "Dental Surgeon", image: '/images/doctors/doctor4-min.jpg', facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Thomas Aglio', designation: "Hepatologist", image: '/images/doctors/doctor5-min.jpg', facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
+    { name: 'Terry Dubrow', designation: "Urologist", image: '/images/doctors/doctor6-min.jpg', facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' }
   ]
-  // const [data, setData] = useState(doctors);
 
   const navigate = useNavigate();
 

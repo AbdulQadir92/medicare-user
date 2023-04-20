@@ -1,23 +1,15 @@
 import '../../css/components/services/serviceSection.css';
 
-import heartBeat from '../../imagesMin/home/services/heartBeat-min.png';
-import eyeCare from '../../imagesMin/home/services/eyeCare-min.png';
-import dentistry from '../../imagesMin/home/services/dentistry-min.png';
-import virology from '../../imagesMin/home/services/virology-min.png'
-import hepatology from '../../imagesMin/home/services/hepatology-min.png';
-import urology from '../../imagesMin/home/services/urology-min.png';
-
-
 
 const Service = () => {
 
   const services = [
-    { service: 'Cardiology', image: heartBeat },
-    { service: 'Eye Care', image: eyeCare },
-    { service: 'Dentistry', image: dentistry },
-    { service: 'Virology', image: virology },
-    { service: 'Hepatology', image: hepatology },
-    { service: 'Urology', image: urology }
+    { service: 'Cardiology', image: "/images/home/services/heartBeat-min.png" },
+    { service: 'Eye Care', image: "/images/home/services/eyeCare-min.png" },
+    { service: 'Dentistry', image: "/images/home/services/dentistry-min.png" },
+    { service: 'Virology', image: "/images/home/services/virology-min.png" },
+    { service: 'Hepatology', image: "/images/home/services/hepatology-min.png" },
+    { service: 'Urology', image: "/images/home/services/urology-min.png" }
   ]
 
   return (

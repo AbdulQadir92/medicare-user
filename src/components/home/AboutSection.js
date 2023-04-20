@@ -1,5 +1,4 @@
 import '../../css/components/home/aboutSection.css';
-import happyPatient from '../../imagesMin/home/happyPatient-min.jpg';
 
 
 const AboutSection = () => {
@@ -12,7 +11,7 @@ const AboutSection = () => {
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci amet quia facilis nulla mollitia voluptatum molestias ipsam repellat, reprehenderit, quasi a, qui perspiciatis consequatur corporis? Quo aliquam error sint amet.</p>
             </div>
             <div className="right">
-                <img src={happyPatient} alt="..." width="500px" height="300px" />
+                <img src="/images/home/happyPatient-min.jpg" alt="..." width="500px" height="300px" />
             </div>
         </section>
     )

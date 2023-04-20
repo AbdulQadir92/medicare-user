@@ -91,8 +91,18 @@
     .header-msg p {
         margin: 10px auto 0;
     }
-    
+
     .header-msg button {
         margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .header {
+        height: 335px;
+    }
+
+    .header-msg h1 {
+        font-size: 27px;
     }
 }

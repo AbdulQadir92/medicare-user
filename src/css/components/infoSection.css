@@ -27,7 +27,7 @@
     font-size: var(--icon-size);
 }
 
-.info-card > div {
+.info-card>div {
     font-size: var(--font-size-sm);
 
     /* color: var(--light-text); */
@@ -53,7 +53,7 @@
 @media screen and (max-width: 768px) {
     .info-section {
         grid-template-columns: 100%;
-    
+
         position: relative;
 
         height: 200px;
@@ -84,5 +84,13 @@
 
     .info-card span {
         font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .info-card {
+        left: 55%;
+        transform: translateX(-56%);
+        width: 250px;
     }
 }
