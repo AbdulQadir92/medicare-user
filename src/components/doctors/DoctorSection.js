@@ -1,5 +1,4 @@
 import '../../css/components/doctors/doctorSection.css';
-import { useState } from 'react';
 
 import doctor1 from '../../imagesMin/home/doctors/doctor1-min.jpg';
 import doctor2 from '../../imagesMin/home/doctors/doctor2-min.jpg';
@@ -10,6 +9,7 @@ import doctor6 from '../../imagesMin/home/doctors/doctor6-min.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faGooglePlus } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const DoctorSection = () => {
@@ -21,26 +21,26 @@ const DoctorSection = () => {
         { name: 'Thomas Aglio', designation: "Hepatologist", image: doctor5, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
         { name: 'Terry Dubrow', designation: "Urologist", image: doctor6, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' }
     ]
-    const [data, setData] = useState(doctors);
+    // const [data, setData] = useState(doctors);
 
     return (
         <section className="doctor-section section-padding">
             <h2>Our Doctors</h2>
             <div className="doctor-section-cards-container">
-                {data && data.map((doctor, index) => (
+                {doctors && doctors.map((doctor, index) => (
                     <div className="doctor-section-card" key={index}>
                         <div className="doctor-section-card-top">
                             <img src={doctor.image} alt="..." width="300" height="300" />
                             <div className="doctor-social-icons">
-                                <a href="" target="_blank">
+                                <Link to="/" target="_blank">
                                     <FontAwesomeIcon icon={faFacebook} className="doctor-social-icon" />
-                                </a>
-                                <a href="" target="_blank">
+                                </Link>
+                                <Link to="/" target="_blank">
                                     <FontAwesomeIcon icon={faTwitter} className="doctor-social-icon" />
-                                </a>
-                                <a href="" target="_blank">
+                                </Link>
+                                <Link to="/" target="_blank">
                                     <FontAwesomeIcon icon={faGooglePlus} className="doctor-social-icon" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="doctor-section-card-body">

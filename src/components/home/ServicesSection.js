@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../css/components/home/servicesSection.css';
 
@@ -21,7 +20,7 @@ const ServicesSection = () => {
         { service: 'Urology', image: urology }
     ]
 
-    const [data, setData] = useState(services);
+    // const [data, setData] = useState(services);
     const navigate = useNavigate();
 
     const navigateToServices = () => {
@@ -32,11 +31,11 @@ const ServicesSection = () => {
         <section className="services-section section-padding">
             <h1>What We Provide</h1>
             <div className="service-card-container">
-                {data && data.map((service, index) => (
+                {services && services.map((service, index) => (
                     <div className="service-card" key={index}>
                         <div>
-                            <h2  onClick={navigateToServices}>{service.service}</h2>
-                            <img src={service.image} alt="..."  onClick={navigateToServices} />
+                            <h2 onClick={navigateToServices}>{service.service}</h2>
+                            <img src={service.image} alt="..." onClick={navigateToServices} />
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatem</p>
                     </div>

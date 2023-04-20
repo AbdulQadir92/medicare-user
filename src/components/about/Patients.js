@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../../css/components/about/patients.css';
 import patient1 from '../../imagesMin/about/patient1-min.jpg';
 import patient2 from '../../imagesMin/about/patient2-min.png';
@@ -14,13 +13,13 @@ const Patients = () => {
         { image: patient3, msg: patientMsg, name: 'Paul Heyman', profession: 'Manager' }
     ]
 
-    const [data, setData] = useState(patients);
+    // const [data, setData] = useState(patients);
 
     return (
         <div className="patients section-padding">
             <h2>What Our Patients Say</h2>
 
-            {data && data.map((patient, index) => (
+            {patients && patients.map((patient, index) => (
                 <div className="patient-card" key={index}>
                     <img src={patient.image} alt="..." width="200" height="200" />
                     <div>

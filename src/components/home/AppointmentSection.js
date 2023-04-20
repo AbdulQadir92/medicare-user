@@ -11,7 +11,7 @@ const AppointmentSection = () => {
         { service: 'Hepatology', doctor: 'Thomas Aglio' },
         { service: 'Urology', doctor: 'Terry Dubrow' }
     ]
-    const [data, setData] = useState(_data);
+    // const [data, setData] = useState(_data);
 
 
     const [formData, setFormData] = useState({});
@@ -19,14 +19,14 @@ const AppointmentSection = () => {
     const handleChange = (e) => {
         const name = e.target.id;
         const value = e.target.value;
-        setFormData(prevValues => ({...prevValues, [name]: value}));
+        setFormData(prevValues => ({ ...prevValues, [name]: value }));
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(formData);
-        
+        // console.log(formData);
+
         setFormData({});
         e.target.reset();
     }
@@ -38,7 +38,7 @@ const AppointmentSection = () => {
                 <div className="fields-container">
                     <div>
                         <label className="input-label" htmlFor="name">Name</label>
-                        <input className="input-field" type="text" id="name" onChange={handleChange} value={formData.name || ''}  required="required"/>
+                        <input className="input-field" type="text" id="name" onChange={handleChange} value={formData.name || ''} required="required" />
                     </div>
                     <div>
                         <label className="input-label" htmlFor="email">Email</label>
@@ -50,7 +50,7 @@ const AppointmentSection = () => {
                         <label className="input-label" htmlFor="service">Service</label>
                         <select className="select-field" id="service" onChange={handleChange}>
                             <option>Select</option>
-                            {data && data.map((service, index) => (
+                            {_data && _data.map((service, index) => (
                                 <option value={service.service} key={index}>{service.service}</option>
                             ))}
                         </select>
@@ -59,7 +59,7 @@ const AppointmentSection = () => {
                         <label className="input-label" htmlFor="doctor">Doctor</label>
                         <select className="select-field" id="doctor" onChange={handleChange}>
                             <option>Select</option>
-                            {data && data.map((doctor, index) => (
+                            {_data && _data.map((doctor, index) => (
                                 <option value={doctor.doctor} key={index}>{doctor.doctor}</option>
                             ))}
                         </select>
@@ -68,11 +68,11 @@ const AppointmentSection = () => {
                 <div className="fields-container">
                     <div>
                         <label className="input-label" htmlFor="date">Date</label>
-                        <input className="input-field" type="date" id="date" onChange={handleChange} value={formData.date || ''}  required="required" />
+                        <input className="input-field" type="date" id="date" onChange={handleChange} value={formData.date || ''} required="required" />
                     </div>
                     <div>
                         <label className="input-label" htmlFor="time">Time</label>
-                        <input className="input-field" type="time" id="time" onChange={handleChange} value={formData.time || ''}  required="required" />
+                        <input className="input-field" type="time" id="time" onChange={handleChange} value={formData.time || ''} required="required" />
                     </div>
                 </div>
                 <div className="btn-container">

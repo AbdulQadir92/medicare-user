@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../css/components/home/doctorsSection.css';
 
@@ -22,7 +21,7 @@ const DoctorsSection = () => {
     { name: 'Thomas Aglio', designation: "Hepatologist", image: doctor5, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' },
     { name: 'Terry Dubrow', designation: "Urologist", image: doctor6, facebookAccount: 'https://www.facebook.com/a.qadir.jamali/' }
   ]
-  const [data, setData] = useState(doctors);
+  // const [data, setData] = useState(doctors);
 
   const navigate = useNavigate();
 
@@ -34,20 +33,20 @@ const DoctorsSection = () => {
     <div className="doctors-section section-padding">
       <h1>Our Doctors</h1>
       <div className="doctor-card-container">
-        {data && data.map((doctor, index) => (
+        {doctors && doctors.map((doctor, index) => (
           <div className="doctor-card" key={index}>
             <div className="img-container">
               <img src={doctor.image} alt="..." width="250" height="100" />
               <div className="social-icons">
-                <a href="" target="_blank">
+                <Link to="/" target="_blank">
                   <FontAwesomeIcon icon={faFacebook} className="social-icon" />
-                </a>
-                <a href="" target="_blank">
+                </Link>
+                <Link to="/" target="_blank">
                   <FontAwesomeIcon icon={faTwitter} className="social-icon" />
-                </a>
-                <a href="" target="_blank">
+                </Link>
+                <Link to="/" target="_blank">
                   <FontAwesomeIcon icon={faGooglePlus} className="social-icon" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="card-body">

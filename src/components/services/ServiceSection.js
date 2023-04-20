@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../../css/components/services/serviceSection.css';
 
 import heartBeat from '../../imagesMin/home/services/heartBeat-min.png';
@@ -21,14 +20,12 @@ const Service = () => {
     { service: 'Urology', image: urology }
   ]
 
-  const [data, setData] = useState(services);
-
   return (
     <section className="service-section section-padding">
       <h2>Our Services</h2>
 
       <div className="service-section-card-container">
-        {data && data.map((service, index) => (
+        {services && services.map((service, index) => (
           <div key={index}>
             <div className="service-section-card-top">
               <h2>{service.service}</h2>
