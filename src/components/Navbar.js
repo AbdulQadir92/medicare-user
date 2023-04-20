@@ -21,7 +21,7 @@ const Navbar = () => {
     useEffect(() => {
         makeActive(loc);
         changeNavBg();
-    }, [loc.pathname, currentTheme])
+    }, [loc, currentTheme])
 
     useEffect(() => {
         themeOnLoad();
